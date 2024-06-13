@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cer4vaasuirfn"]
+
+[ext_resource type="Texture2D" uid="uid://bdbaittvpvq7s" path="res://terrain_tileset.png" id="1_tsjmv"]
+[ext_resource type="Script" path="res://Terrain.gd" id="2_lioun"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_20mux"]
+texture = ExtResource("1_tsjmv")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8uvt8"]
+sources/0 = SubResource("TileSetAtlasSource_20mux")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Terrain" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_8uvt8")
+format = 2
+script = ExtResource("2_lioun")
