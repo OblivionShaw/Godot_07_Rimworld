@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dc605887rkt70"]
+
+[ext_resource type="Script" path="res://Pawn.gd" id="1_p0e2r"]
+[ext_resource type="Texture2D" uid="uid://cr5n733fdb3nu" path="res://art/kenney_tiny-dungeon/Tiles/tile_0096.png" id="2_hqu8y"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_phkp8"]
+radius = 6.0
+height = 14.0
+
+[node name="Pawn" type="CharacterBody2D"]
+script = ExtResource("1_p0e2r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_hqu8y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_phkp8")
