@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cer4vaasuirfn"]
+[gd_scene load_steps=10 format=3 uid="uid://cer4vaasuirfn"]
 
 [ext_resource type="Texture2D" uid="uid://bdbaittvpvq7s" path="res://art/terrain_tileset.png" id="1_21ojl"]
 [ext_resource type="Script" path="res://Terrain.gd" id="2_4dyhi"]
 [ext_resource type="Script" path="res://Pathfinding.gd" id="3_4c83q"]
 [ext_resource type="PackedScene" uid="uid://dc605887rkt70" path="res://pawn.tscn" id="4_1tt3f"]
+[ext_resource type="Script" path="res://CameraController.gd" id="4_4gvtr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_20mux"]
 texture = ExtResource("1_21ojl")
@@ -50,6 +51,7 @@ end = Vector2i(64, 64)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1011, 1018)
 zoom = Vector2(0.3, 0.3)
+script = ExtResource("4_4gvtr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-459, -2)
